@@ -1,0 +1,62 @@
+extends ../layouts/panel-layout.pug
+
+block content
+    main.panel-container.container
+        h1.display-1 Add Profit Table
+        a.btn.btn-primary(href="/panel") Back
+    .panel-table
+        form.container.form-inline(method="POST", action="/panel-table")
+            .form-group.row.row-cols-lg-auto.g-3
+                .mb-3
+                    label.form-label(for="table-month") Month of Profit Table
+                    input#table-month.form-control.table-month(type="text", name="tableMonth")
+            .form-group.row.row-cols-lg-auto.g-3
+                .mb-3
+                    h4
+                        | VIP1
+                        hr
+                    label.form-label(for="table-input") Won
+                    input#table-input.form-control(type="text", name="vip1Won")
+                    label.form-label.total-lable(for="table-input") Total
+                    input#table-input.form-control(type="text", name="vip1Total")
+                .mb-3
+                    h4
+                        | VIP2
+                        hr
+                    label.form-label(for="table-input") Won
+                    input#table-input.form-control(type="text", name="vip2Won")
+                    label.form-label.total-lable(for="table-input") Total
+                    input#table-input.form-control(type="text", name="vip2Total")
+                .mb-3
+                    h4
+                        | VIP3
+                        hr
+                    label.form-label(for="table-input") Won
+                    input#table-input.form-control(type="text", name="vip3Won")
+                    label.form-label.total-lable(for="table-input") Total
+                    input#table-input.form-control(type="text", name="vip3Total")
+                .mb-3
+                    h4
+                        | VIP4
+                        hr
+                    label.form-label(for="table-input") Won
+                    input#table-input.form-control(type="text", name="vip4Won")
+                    label.form-label.total-lable(for="table-input") Total
+                    input#table-input.form-control(type="text", name="vip4Total")
+                .mb-3
+                    h4
+                        | VIP5
+                        hr
+                    label.form-label(for="table-input") Won
+                    input#table-input.form-control(type="text", name="vip5Won")
+                    label.form-label.total-lable(for="table-input") Total
+                    input#table-input.form-control(type="text", name="vip5Total")
+                .mb-3
+                    h4
+                        | VIP6
+                        hr
+                    label.form-label(for="table-input") Won
+                    input#table-input.form-control(type="text", name="vip6Won")
+                    label.form-label.total-lable(for="table-input") Total
+                    input#table-input.form-control(type="text", name="vip6Total")
+            button.btn.btn-primary(type="submit") Add Profit Table

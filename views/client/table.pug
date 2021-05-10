@@ -1,0 +1,46 @@
+extends ../layouts/main-layout.pug
+
+block content
+    section.profit-hero.jumbotron.jumbotron-fluid 
+        .container
+            .profit-hero__text-container
+                h1.display-4 Vinsttabell
+    section.profit 
+        .owl-carousel.owl-carousel2.owl-theme.container
+            each table in tables
+                div
+                    .container.profit__container
+                        h3
+                            | #{table.month}
+                            hr
+                        table.table.table-dark.table-hover.table-bordered
+                            thead
+                                tr 
+                                    th(scope="col") VIP
+                                    th(scope="col") Vinst
+                                    th(scope="col") Total
+                            tbody
+                                tr
+                                    th(scope="row") 1
+                                    td #{table.vip1.won}
+                                    td #{table.vip1.total}
+                                tr
+                                    th(scope="row") 2
+                                    td #{table.vip2.won}
+                                    td #{table.vip2.total}
+                                tr
+                                    th(scope="row") 3
+                                    td #{table.vip3.won}
+                                    td #{table.vip3.total}
+                                tr
+                                    th(scope="row") 4
+                                    td #{table.vip4.won}
+                                    td #{table.vip4.total}
+                                tr
+                                    th(scope="row") 5
+                                    td #{table.vip5.won}
+                                    td #{table.vip5.total}
+                                tr
+                                    th(scope="row") 6
+                                    td #{table.vip6.won}
+                                    td #{table.vip6.total}

@@ -1,0 +1,11 @@
+extends ../layouts/panel-layout.pug
+
+block content
+    section.panel-login
+        form.panel-login__form(action="/panel-login", method="POST")
+            h3.display-3 Panel Login
+            .form-group
+                .mb-3
+                    label.form-label(for="token-input") Token
+                    input#token-input.form-control(type="text", name="token")
+            button.btn.btn-primary.register__btn(type="submit") Login

@@ -1,0 +1,31 @@
+{
+  "name": "winwintips",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "start:dev": "nodemon app.js"
+  },
+  "author": "Faris Demirovic",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
+    "connect-mongodb-session": "^2.4.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "express-validator": "^6.10.0",
+    "mongoose": "^5.12.2",
+    "node-fetch": "^2.6.1",
+    "nodemailer": "^6.5.0",
+    "nodemailer-sendgrid": "^1.0.3",
+    "pug": "^3.0.2"
+  }
+}

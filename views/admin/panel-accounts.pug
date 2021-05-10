@@ -1,0 +1,49 @@
+extends ../layouts/panel-layout.pug
+
+block content
+    - var noaccounts = !accounts ? true : false;
+    - var accountUsername = accounts ? accounts[0].username : null;
+    - var accountEmail = accounts ? accounts[0].email : null;
+    - var admissionYear = accounts ? accounts[0].admission.getFullYear() : null;
+    - var admissionMonth = accounts ? accounts[0].admission.getMonth() + 1 : null;
+    - var admissionDay = accounts ? accounts[0].admission.getDate() : null;
+    //- - var expirationYear = accounts ? accounts[0].expiration.getFullYear() : null;
+    //- - var expirationMonth = accounts ? accounts[0].expiration.getMonth() + 1 : null;
+    //- - var expirationDay = accounts ? accounts[0].expiration.getDate() : null;
+
+    main.panel-container.container
+        h1.display-1 Account Admission
+        a.btn.btn-primary(href="/panel") Back
+    if (noaccounts)
+        h1.no-accounts No registrations are waiting for admission.
+    else
+        .panel-accounts
+            .panel-accounts__card
+                .modal-dialog.modal-login
+                    .modal-content 
+                        .modal-header.account-header
+                            .avatar.panel-avatar
+                                img(src="/images/user.png", alt="Avatar")
+                            h4.modal-title.account-title#account-username Username: #{accountUsername}
+                            h5.modal-title.account-title#account-email #{accountEmail}
+                            p.account-date#account-date Date of Admission: #{admissionYear}/#{admissionMonth}/#{admissionDay}
+                            //- h4.modal-title.account-title Expired: #{expirationYear}/#{expirationMonth}/#{expirationDay}
+                        .modal-body 
+                            form(action="/accept-account", method="post")
+                                .form-group 
+                                    input#accept-username(type="hidden", name="username", value=accountUsername)
+                                    button.btn.btn-success(type="submit") Accept Account
+                            form(action="/reject-account", method="post", style="margin-bottom: 0")
+                                .form-group(style="margin-bottom: 0")
+                                    input#reject-username(type="hidden", name="username", value=accountUsername)
+                                    button.btn.btn-danger(type="submit", style="margin-bottom: 0") Reject Account
+                        .switch-items
+                            button.btn.btn-secondary#move-left(onclick="moveLeft()")
+                                i.fas.fa-arrow-left
+                            h3#account-number
+                                | 1/#{n}
+                            button.btn.btn-secondary#move-right(onclick="moveRight()")
+                                i.fas.fa-arrow-right
+    
+    input#accounts(type="hidden", value=accounts)
+    input#n(type="hidden", value=n)

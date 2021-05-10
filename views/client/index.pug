@@ -1,0 +1,71 @@
+extends ../layouts/main-layout.pug
+
+block content 
+    section.hero.jumbotron.jumbotron-fluid 
+        .container
+            h1.display-4 Premium Betting Tips
+            button.btn.btn-success(onclick="registerRedirect()") Börja tjäna
+    section.cards-section
+        .container.cards
+            .my-card
+                .my-card__body
+                    i.fas.fa-sack-dollar
+                    h4 
+                        | Enkla Vinster
+                        hr(style="margin-bottom: 0;")
+                    p Vi erbjuder djupa speltips med stor chans till vinst.  
+            .my-card
+                .my-card__body
+                    i.far.fa-futbol
+                    h4
+                        | Variation
+                        hr(style="margin-bottom: 0;")
+                    p Gillar du inte fotboll? Inga problem, vi erbjuder spelanalyser inom flera olika sporter.
+            .my-card 
+                .my-card__body
+                    i.fas.fa-globe-europe
+                    h4 
+                        | Global
+                        hr(style="margin-bottom: 0;")
+                    p Våra spelanalyser täcker flera matcher världen över!
+    section.testimonials 
+        .gtco-testimonials.container 
+            .owl-carousel.owl-carousel1.owl-theme
+                div
+                    .card.text-center
+                        img.card-img-top(src="/images/user-testimonial.png", alt="avatar")
+                        .card-body 
+                            h5 
+                                | Vukasin Vukic 
+                                br
+                                span Våra medlemmar
+                            p.card-text “ Bästa matchanalyserna och speltipsen man kan hitta ”
+                div
+                    .card.text-center
+                        img.card-img-top(src="/images/user-testimonial.png", alt="avatar")
+                        .card-body 
+                            h5 
+                                | Kristian Palmgren
+                                br
+                                span Våra medlemmar
+                            p.card-text “ Pålitlig gäng som gör ett fantastiskt jobb ”
+                div
+                    .card.text-center
+                        img.card-img-top(src="/images/user-testimonial.png", alt="avatar")
+                        .card-body 
+                            h5 
+                                | Tanya Eriksson
+                                br
+                                span Våra medlemmar
+                            p.card-text “ Om du vill tjäna pengar så är Win Win Tips för dig ”
+                div
+                    .card.text-center
+                        img.card-img-top(src="/images/user-testimonial.png", alt="avatar")
+                        .card-body 
+                            h5 
+                                | Charlie Johansson
+                                br
+                                span Våra medlemmar
+                            p.card-text “ Till skillnad från många andra så är Win Win Tips äkta ”
+        
+                

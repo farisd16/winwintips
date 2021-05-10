@@ -1,0 +1,53 @@
+extends ../layouts/panel-layout.pug
+
+block content
+    main.panel-container.container
+        h1.display-1 Modify Tips
+        a.btn.btn-primary(href="/panel") Back
+    .panel-tips
+        form.container(action="/add-tip", method="POST")
+            .form-check.form-check-inline
+                input.form-check-input#inlineRadio1(type="radio", name="inlineRadioOptions", value="vip1")
+                label.form-check-label(for="inlineRadio1") VIP1
+            .form-check.form-check-inline
+                input.form-check-input#inlineRadio2(type="radio", name="inlineRadioOptions", value="vip2")
+                label.form-check-label(for="inlineRadio2") VIP2
+            .form-check.form-check-inline
+                input.form-check-input#inlineRadio3(type="radio", name="inlineRadioOptions", value="vip3")
+                label.form-check-label(for="inlineRadio3") VIP3
+            .form-check.form-check-inline
+                input.form-check-input#inlineRadio4(type="radio", name="inlineRadioOptions", value="vip4")
+                label.form-check-label(for="inlineRadio4") VIP4
+            .form-check.form-check-inline
+                input.form-check-input#inlineRadio5(type="radio", name="inlineRadioOptions", value="vip5")
+                label.form-check-label(for="inlineRadio5") VIP5
+            .form-check.form-check-inline
+                input.form-check-input#inlineRadio6(type="radio", name="inlineRadioOptions", value="vip6")
+                label.form-check-label(for="inlineRadio6") VIP6
+            .mb-3.tip-text
+                label.form-label(for="tipText") Tip text
+                textarea.form-control#tipText(name="tipText", rows="4")
+            .mb-3
+                button.btn.btn-primary(type="submit") Add Tip 
+    .panel-tips
+        form.container(action="/delete-tip", method="POST")
+            .form-check.form-check-inline
+                input.form-check-input#inlineRadio1(type="radio", name="inlineRadioOptions", value="vip1")
+                label.form-check-label(for="inlineRadio1") VIP1
+            .form-check.form-check-inline
+                input.form-check-input#inlineRadio2(type="radio", name="inlineRadioOptions", value="vip2")
+                label.form-check-label(for="inlineRadio2") VIP2
+            .form-check.form-check-inline
+                input.form-check-input#inlineRadio3(type="radio", name="inlineRadioOptions", value="vip3")
+                label.form-check-label(for="inlineRadio3") VIP3
+            .form-check.form-check-inline
+                input.form-check-input#inlineRadio4(type="radio", name="inlineRadioOptions", value="vip4")
+                label.form-check-label(for="inlineRadio4") VIP4
+            .form-check.form-check-inline
+                input.form-check-input#inlineRadio5(type="radio", name="inlineRadioOptions", value="vip5")
+                label.form-check-label(for="inlineRadio5") VIP5
+            .form-check.form-check-inline
+                input.form-check-input#inlineRadio6(type="radio", name="inlineRadioOptions", value="vip6")
+                label.form-check-label(for="inlineRadio6") VIP6
+            .mb-3
+                button.btn.btn-danger(type="submit") Delete Tip 

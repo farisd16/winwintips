@@ -1,0 +1,53 @@
+extends ../layouts/main-layout.pug
+
+block content 
+    section.tips-hero.jumbotron.jumbotron-fluid 
+        .container
+            .tips-hero__btn-container
+                .btn-group.shadow-lg#vips(role="group", aria-label="Basic radio toggle button group")  
+                    input.btn-check#btnradio1(type="radio", name="btnradio", autocomplete="off", checked, value="vip1")
+                    if (vip1Updated)
+                        label.btn.btn-success.vip-label(for="btnradio1") VIP 1
+                    else
+                        label.btn.btn-secondary.vip-label(for="btnradio1") VIP 1
+
+                    input.btn-check#btnradio2(type="radio", name="btnradio", autocomplete="off", value="vip2")
+                    if (vip2Updated)
+                        label.btn.btn-success.vip-label(for="btnradio2") VIP 2
+                    else
+                        label.btn.btn-secondary.vip-label(for="btnradio2") VIP 2
+
+                    input.btn-check#btnradio3(type="radio", name="btnradio", autocomplete="off", value="vip3")
+                    if (vip3Updated)
+                        label.btn.btn-success.vip-label(for="btnradio3") VIP 3
+                    else
+                        label.btn.btn-secondary.vip-label(for="btnradio3") VIP 3
+
+                    input.btn-check#btnradio4(type="radio", name="btnradio", autocomplete="off", value="vip4")
+                    if (vip4Updated)
+                        label.btn.btn-success.vip-label(for="btnradio4") VIP 4
+                    else
+                        label.btn.btn-secondary.vip-label(for="btnradio4") VIP 4
+
+                    input.btn-check#btnradio5(type="radio", name="btnradio", autocomplete="off", value="vip5")
+                    if (vip5Updated)
+                        label.btn.btn-success.vip-label(for="btnradio5") VIP 5
+                    else
+                        label.btn.btn-secondary.vip-label(for="btnradio5") VIP 5
+
+                    input.btn-check#btnradio6(type="radio", name="btnradio", autocomplete="off", value="vip6")
+                    if (vip6Updated)
+                        label.btn.btn-success.vip-label(for="btnradio6") VIP 6
+                    else
+                        label.btn.btn-secondary.vip-label(for="btnradio6") VIP 6
+    section.tips
+        .tips-container
+            .tips-container__text.shadow.bg-body-rounded
+                pre#vip-text(align="justify", oncopy="return false", onpaste="return false", oncut="return false")
+
+    input#vip1(type="hidden", value=vip1)
+    input#vip2(type="hidden", value=vip2)
+    input#vip3(type="hidden", value=vip3)
+    input#vip4(type="hidden", value=vip4)
+    input#vip5(type="hidden", value=vip5)
+    input#vip6(type="hidden", value=vip6)
