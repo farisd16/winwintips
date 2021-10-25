@@ -40,9 +40,6 @@ exports.getIndex = (req, res, next) => {
         const vip1 = findTip('vip1');
         const vip2 = findTip('vip2');
         const vip3 = findTip('vip3');
-        const vip4 = findTip('vip4');
-        const vip5 = findTip('vip5');
-        const vip6 = findTip('vip6');
 
         res.render('client/tips', {
             pageTitle: 'Win-Win Tips',
@@ -51,13 +48,7 @@ exports.getIndex = (req, res, next) => {
             vip2: vip2,
             vip2Updated: isToday(vip2.updated) ? true : false,
             vip3: vip3,
-            vip3Updated: isToday(vip3.updated) ? true : false,
-            vip4: vip4,
-            vip4Updated: isToday(vip4.updated) ? true : false,
-            vip5: vip5,
-            vip5Updated: isToday(vip5.updated) ? true : false,
-            vip6: vip6,
-            vip6Updated: isToday(vip6.updated) ? true : false
+            vip3Updated: isToday(vip3.updated) ? true : false
         });
     })
     .catch(err => {

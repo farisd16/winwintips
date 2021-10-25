@@ -218,14 +218,8 @@ exports.postPanelTable = (req, res, next) => {
     const vip2Total = req.body.vip2Total;
     const vip3Won = req.body.vip3Won;
     const vip3Total = req.body.vip3Total;
-    const vip4Won = req.body.vip4Won;
-    const vip4Total = req.body.vip4Total;
-    const vip5Won = req.body.vip5Won;
-    const vip5Total = req.body.vip5Total;
-    const vip6Won = req.body.vip6Won;
-    const vip6Total = req.body.vip6Total;
 
-    if (!tableMonth || !vip1Won || !vip1Total || !vip2Won || !vip2Total || !vip3Won || !vip3Total || !vip4Won || !vip4Total || !vip5Won || !vip5Total || !vip6Won || !vip6Total) {
+    if (!tableMonth || !vip1Won || !vip1Total || !vip2Won || !vip2Total || !vip3Won || !vip3Total) {
         return res.redirect('/panel-table?error=true&for=panel-table')
     }
 
@@ -242,18 +236,6 @@ exports.postPanelTable = (req, res, next) => {
         vip3: {
             won: vip3Won,
             total: vip3Total
-        },
-        vip4: {
-            won: vip4Won,
-            total: vip4Total
-        },
-        vip5: {
-            won: vip5Won,
-            total: vip5Total
-        },
-        vip6: {
-            won: vip6Won,
-            total: vip6Total
         }
     });
 

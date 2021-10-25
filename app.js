@@ -2,7 +2,6 @@ const path = require('path');
 
 const express = require('express');
 const session = require('express-session');
-const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const MongoDBStore = require('connect-mongodb-session')(session);
 const compression = require('compression');
@@ -29,8 +28,8 @@ const adminRoutes = require('./routes/admin');
 const errorController = require('./controllers/error');
 
 app.use(compression());
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/images', express.static(path.join(__dirname, 'images')));
 app.use(session({

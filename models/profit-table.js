@@ -18,18 +18,6 @@ const profitTableSchema = new Schema({
     vip3: {
         won: Number,
         total: Number
-    },
-    vip4: {
-        won: Number,
-        total: Number
-    },
-    vip5: {
-        won: Number,
-        total: Number
-    },
-    vip6: {
-        won: Number,
-        total: Number
     }
 }, { timestamps: true });
 
