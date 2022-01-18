@@ -3,21 +3,9 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const profitTableSchema = new Schema({
-    month: {
-        type: String,
-        required: true
-    },
-    vip1: {
-        won: Number,
-        total: Number
-    },
-    vip2: {
-        won: Number,
-        total: Number
-    },
-    vip3: {
-        won: Number,
-        total: Number
+    percentages: {
+        type: [Number],
+        default: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
     }
 }, { timestamps: true });
 

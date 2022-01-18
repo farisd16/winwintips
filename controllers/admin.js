@@ -211,36 +211,28 @@ exports.getPanelTable = (req, res, next) => {
 }
 
 exports.postPanelTable = (req, res, next) => {
-    const tableMonth = req.body.tableMonth;
-    const vip1Won = req.body.vip1Won;
-    const vip1Total = req.body.vip1Total;
-    const vip2Won = req.body.vip2Won;
-    const vip2Total = req.body.vip2Total;
-    const vip3Won = req.body.vip3Won;
-    const vip3Total = req.body.vip3Total;
+    const january = req.body.january;
+    const february = req.body.february;
+    const march = req.body.march;
+    const april = req.body.april;
+    const may = req.body.may;
+    const june = req.body.june;
+    const july = req.body.july;
+    const august = req.body.august;
+    const september = req.body.september;
+    const october = req.body.october;
+    const november = req.body.november;
+    const december = req.body.december;
 
-    if (!tableMonth || !vip1Won || !vip1Total || !vip2Won || !vip2Total || !vip3Won || !vip3Total) {
+    if (!january || !february || !march || !april || !may || !june || !july || !august || !september || !october || !november || !december) {
         return res.redirect('/panel-table?error=true&for=panel-table')
     }
 
     const newTable = new ProfitTable({
-        month: tableMonth,
-        vip1: {
-            won: vip1Won,
-            total: vip1Total
-        },
-        vip2: {
-            won: vip2Won,
-            total: vip2Total
-        },
-        vip3: {
-            won: vip3Won,
-            total: vip3Total
-        }
+        percentages: [january, february, march, april, may, june, july, august, september, october, november, december]
     });
 
-    newTable
-    .save()
+    newTable.save()
     .then(table => {
         return res.redirect('/panel-table?success=true&for=panel-table');
     })

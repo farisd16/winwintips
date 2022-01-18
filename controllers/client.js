@@ -68,15 +68,13 @@ exports.getAbout = (req, res, next) => {
 
 exports.getTable = (req, res, next) => {
     ProfitTable
-    .find()
+    .findOne()
     .sort({ createdAt: -1 })
-    .limit(5)
-    .then(tables => {
-        // console.log(tables);
+    .then(table => {
         res.render('client/table', {
             pageTitle: 'Vinsttabell',
             path: 'table',
-            tables: tables
+            percentages: table.percentages
         });
     })
     .catch(err => {
